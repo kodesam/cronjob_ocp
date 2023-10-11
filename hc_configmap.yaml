@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: hcconfigmap
 data:
-  status_check_output.sh: |
+  check_status.sh: |
     #!/bin/sh
 
     current_date=$(date +"%Y-%m-%d")
