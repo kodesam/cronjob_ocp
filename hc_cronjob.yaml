@@ -45,7 +45,7 @@ spec:
               items:
               - key: check_status.sh
                 path: check_status.sh
-              name: myconfigmap-3
+              name: hcconfigmap
             name: myvolume
   schedule: '*/1 * * * *'
   successfulJobsHistoryLimit: 3
