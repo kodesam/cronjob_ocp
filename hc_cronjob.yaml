@@ -1,0 +1,55 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  creationTimestamp: "2023-10-11T15:43:45Z"
+  generation: 1
+  name: mycronjob-4
+  namespace: open-caas-ops
+  resourceVersion: "4067928"
+  uid: 10331ba8-67e0-49af-a798-05aaa210e968
+spec:
+  concurrencyPolicy: Allow
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    metadata:
+      creationTimestamp: null
+    spec:
+      template:
+        metadata:
+          creationTimestamp: null
+        spec:
+          containers:
+          - command:
+            - /bin/sh
+            - -c
+            - cat /app/check_status.sh | /bin/sh
+            image: quay.io/openshift/origin-cli
+            imagePullPolicy: Always
+            name: myapp
+            resources: {}
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+            volumeMounts:
+            - mountPath: /app
+              name: myvolume
+          dnsPolicy: ClusterFirst
+          restartPolicy: OnFailure
+          schedulerName: default-scheduler
+          securityContext: {}
+          serviceAccount: ocsa
+          serviceAccountName: ocsa
+          terminationGracePeriodSeconds: 30
+          volumes:
+          - configMap:
+              defaultMode: 420
+              items:
+              - key: check_status.sh
+                path: check_status.sh
+              name: myconfigmap-3
+            name: myvolume
+  schedule: '*/1 * * * *'
+  successfulJobsHistoryLimit: 3
+  suspend: false
+status:
+  lastScheduleTime: "2023-10-11T16:05:00Z"
+  lastSuccessfulTime: "2023-10-11T16:05:07Z"
