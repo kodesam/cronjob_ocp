@@ -1,0 +1,231 @@
+#############################################################################################################
+Wed Oct 18 16:04:04 UTC 2023
+#############################################################################################################
+#############################################################################################################
+Cluster Information
+#############################################################################################################
+[0;32mKubernetes control plane[0m is running at [0;33mhttps://172.30.0.1:443[0m
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+#############################################################################################################
+checking node status
+#############################################################################################################
+NAME        STATUS   ROLES           AGE    VERSION
+master101   Ready    master,worker   107d   v1.23.17+26fdcdf
+master102   Ready    master,worker   107d   v1.23.17+26fdcdf
+master103   Ready    master,worker   107d   v1.23.17+26fdcdf
+#############################################################################################################
+clusteroperator status
+#############################################################################################################
+NAME                                       VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE   MESSAGE
+authentication                             4.10.67   True        False         False      25h     
+baremetal                                  4.10.67   True        False         False      107d    
+cloud-controller-manager                   4.10.67   True        False         False      107d    
+cloud-credential                           4.10.67   True        False         False      107d    
+cluster-autoscaler                         4.10.67   True        False         False      107d    
+config-operator                            4.10.67   True        False         False      107d    
+console                                    4.10.67   True        False         False      50m     
+csi-snapshot-controller                    4.10.67   True        False         False      29h     
+dns                                        4.10.67   True        False         False      107d    
+etcd                                       4.10.67   True        False         False      107d    
+image-registry                             4.10.67   True        False         False      49m     
+ingress                                    4.10.67   True        False         False      49m     
+insights                                   4.10.67   True        False         False      107d    
+kube-apiserver                             4.10.67   True        False         False      107d    
+kube-controller-manager                    4.10.67   True        False         False      107d    
+kube-scheduler                             4.10.67   True        False         False      107d    
+kube-storage-version-migrator              4.10.67   True        False         False      7h18m   
+machine-api                                4.10.67   True        False         False      107d    
+machine-approver                           4.10.67   True        False         False      107d    
+machine-config                             4.10.67   True        False         False      107d    
+marketplace                                4.10.67   True        False         False      107d    
+monitoring                                 4.10.67   True        False         False      29h     
+network                                    4.10.67   True        False         False      107d    
+node-tuning                                4.10.67   True        False         False      30h     
+openshift-apiserver                        4.10.67   True        False         False      107d    
+openshift-controller-manager               4.10.67   True        False         False      30h     
+openshift-samples                          4.10.67   True        False         False      30h     
+operator-lifecycle-manager                 4.10.67   True        False         False      107d    
+operator-lifecycle-manager-catalog         4.10.67   True        False         False      107d    
+operator-lifecycle-manager-packageserver   4.10.67   True        False         False      7h18m   
+service-ca                                 4.10.67   True        False         False      107d    
+storage                                    4.10.67   True        False         False      107d    
+#############################################################################################################
+checking failed or dergared pods status
+#############################################################################################################
+NAMESPACE                                          NAME                                                         READY   STATUS      RESTARTS       AGE
+#############################################################################################################
+checking node top memory and utilization
+#############################################################################################################
+NAME        CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+master101   2233m        19%    12174Mi         36%       
+master102   1896m        16%    9682Mi          29%       
+master103   1620m        14%    6618Mi          20%       
+#############################################################################################################
+checking top pods cpu and memory util
+#############################################################################################################
+NAMESPACE                                          NAME                                                         CPU(cores)   MEMORY(bytes)   
+nfs-client-provisioner                             nfs-client-provisioner-7c88ffb4f5-2stcx                      2m           8Mi             
+openshift-apiserver                                apiserver-745bdf54f5-6h9gl                                   43m          209Mi           
+openshift-apiserver                                apiserver-745bdf54f5-6mpb6                                   40m          220Mi           
+openshift-apiserver                                apiserver-745bdf54f5-bvwq4                                   32m          199Mi           
+openshift-apiserver-operator                       openshift-apiserver-operator-bfdc65d7f-smz49                 3m           111Mi           
+openshift-authentication                           oauth-openshift-5c96548457-4tvd4                             3m           34Mi            
+openshift-authentication                           oauth-openshift-5c96548457-9v6lf                             6m           39Mi            
+openshift-authentication                           oauth-openshift-5c96548457-ssnv2                             4m           40Mi            
+openshift-authentication-operator                  authentication-operator-5fd7567c4f-swf8s                     23m          131Mi           
+openshift-cloud-controller-manager-operator        cluster-cloud-controller-manager-operator-6b7899cc9f-8knpb   0m           45Mi            
+openshift-cloud-credential-operator                cloud-credential-operator-6cf589fb88-ct2w5                   2m           114Mi           
+openshift-cluster-machine-approver                 machine-approver-7f97779f95-wp2zl                            3m           72Mi            
+openshift-cluster-node-tuning-operator             cluster-node-tuning-operator-58d79cd47f-4xpb2                0m           32Mi            
+openshift-cluster-node-tuning-operator             tuned-928h4                                                  0m           34Mi            
+openshift-cluster-node-tuning-operator             tuned-rg6cn                                                  0m           35Mi            
+openshift-cluster-node-tuning-operator             tuned-smp4v                                                  0m           33Mi            
+openshift-cluster-samples-operator                 cluster-samples-operator-7d87df67d8-cmz5r                    12m          61Mi            
+openshift-cluster-storage-operator                 cluster-storage-operator-7555749784-hhbx5                    6m           70Mi            
+openshift-cluster-storage-operator                 csi-snapshot-controller-7d4768ccd9-75nj5                     0m           15Mi            
+openshift-cluster-storage-operator                 csi-snapshot-controller-7d4768ccd9-hsxv6                     0m           11Mi            
+openshift-cluster-storage-operator                 csi-snapshot-controller-operator-74c98df8f6-28745            5m           64Mi            
+openshift-cluster-storage-operator                 csi-snapshot-webhook-68d8598878-ltfkf                        0m           9Mi             
+openshift-cluster-storage-operator                 csi-snapshot-webhook-68d8598878-pq8kp                        0m           9Mi             
+openshift-cluster-version                          cluster-version-operator-d45d55746-nwhj4                     0m           102Mi           
+openshift-config-operator                          openshift-config-operator-944c9c9c5-86mj2                    4m           44Mi            
+openshift-console                                  console-6c9945c48b-jn4cn                                     7m           40Mi            
+openshift-console                                  console-6c9945c48b-n95kv                                     1m           35Mi            
+openshift-console                                  downloads-75b94d78df-77f8b                                   0m           52Mi            
+openshift-console                                  downloads-75b94d78df-llgdn                                   0m           51Mi            
+openshift-console-operator                         console-operator-5778644745-f9snf                            6m           61Mi            
+openshift-controller-manager                       controller-manager-4rqk2                                     0m           30Mi            
+openshift-controller-manager                       controller-manager-gfttl                                     0m           35Mi            
+openshift-controller-manager                       controller-manager-rkhzb                                     5m           144Mi           
+openshift-controller-manager-operator              openshift-controller-manager-operator-66c9c8695f-748cb       8m           69Mi            
+openshift-dns                                      dns-default-2g8ts                                            2m           55Mi            
+openshift-dns                                      dns-default-cllvx                                            1m           56Mi            
+openshift-dns                                      dns-default-kkfp7                                            4m           57Mi            
+openshift-dns                                      node-resolver-9dt5w                                          0m           1Mi             
+openshift-dns                                      node-resolver-lzkvs                                          0m           1Mi             
+openshift-dns                                      node-resolver-nbql8                                          0m           1Mi             
+openshift-dns-operator                             dns-operator-59767d86bf-xgktb                                0m           46Mi            
+openshift-etcd                                     etcd-master101                                               238m         1918Mi          
+openshift-etcd                                     etcd-master102                                               222m         1943Mi          
+openshift-etcd                                     etcd-master103                                               224m         1946Mi          
+openshift-etcd                                     etcd-quorum-guard-f588664bb-d5v74                            7m           1Mi             
+openshift-etcd                                     etcd-quorum-guard-f588664bb-wvcsm                            6m           1Mi             
+openshift-etcd                                     etcd-quorum-guard-f588664bb-zfg6c                            6m           1Mi             
+openshift-etcd-operator                            etcd-operator-5fd47fd97-q28d6                                19m          90Mi            
+openshift-image-registry                           cluster-image-registry-operator-b55f8cd79-xxlk5              2m           52Mi            
+openshift-image-registry                           image-registry-655d769549-24qcz                              1m           37Mi            
+openshift-image-registry                           node-ca-4mp4x                                                0m           1Mi             
+openshift-image-registry                           node-ca-lm7x7                                                0m           1Mi             
+openshift-image-registry                           node-ca-m6wjj                                                0m           1Mi             
+openshift-ingress                                  router-default-59ff7b5b5b-bkcsp                              7m           52Mi            
+openshift-ingress                                  router-default-59ff7b5b5b-xdzkp                              4m           52Mi            
+openshift-ingress-canary                           ingress-canary-gkgzp                                         0m           19Mi            
+openshift-ingress-canary                           ingress-canary-pwbqz                                         0m           17Mi            
+openshift-ingress-canary                           ingress-canary-v2pmn                                         0m           18Mi            
+openshift-ingress-operator                         ingress-operator-5658667966-lvkqh                            1m           169Mi           
+openshift-insights                                 insights-operator-5c8f549d97-qh5b6                           3m           31Mi            
+openshift-kube-apiserver                           kube-apiserver-guard-master101                               0m           0Mi             
+openshift-kube-apiserver                           kube-apiserver-guard-master102                               0m           0Mi             
+openshift-kube-apiserver                           kube-apiserver-guard-master103                               0m           0Mi             
+openshift-kube-apiserver                           kube-apiserver-master101                                     248m         1459Mi          
+openshift-kube-apiserver                           kube-apiserver-master102                                     360m         1524Mi          
+openshift-kube-apiserver                           kube-apiserver-master103                                     321m         1530Mi          
+openshift-kube-apiserver-operator                  kube-apiserver-operator-7d447ddc7f-stlcn                     29m          131Mi           
+openshift-kube-controller-manager                  kube-controller-manager-guard-master101                      0m           0Mi             
+openshift-kube-controller-manager                  kube-controller-manager-guard-master102                      0m           0Mi             
+openshift-kube-controller-manager                  kube-controller-manager-guard-master103                      0m           0Mi             
+openshift-kube-controller-manager                  kube-controller-manager-master101                            9m           145Mi           
+openshift-kube-controller-manager                  kube-controller-manager-master102                            10m          140Mi           
+openshift-kube-controller-manager                  kube-controller-manager-master103                            44m          747Mi           
+openshift-kube-controller-manager-operator         kube-controller-manager-operator-86d9df6474-5s67r            27m          64Mi            
+openshift-kube-scheduler                           openshift-kube-scheduler-guard-master101                     0m           0Mi             
+openshift-kube-scheduler                           openshift-kube-scheduler-guard-master102                     0m           0Mi             
+openshift-kube-scheduler                           openshift-kube-scheduler-guard-master103                     0m           0Mi             
+openshift-kube-scheduler                           openshift-kube-scheduler-master101                           5m           135Mi           
+openshift-kube-scheduler                           openshift-kube-scheduler-master102                           5m           131Mi           
+openshift-kube-scheduler                           openshift-kube-scheduler-master103                           7m           148Mi           
+openshift-kube-scheduler-operator                  openshift-kube-scheduler-operator-984ffc8d7-599jn            16m          64Mi            
+openshift-kube-storage-version-migrator            migrator-dfc7b4468-vxgq5                                     0m           12Mi            
+openshift-kube-storage-version-migrator-operator   kube-storage-version-migrator-operator-76b7c7f8bb-mzbqt      3m           30Mi            
+openshift-machine-api                              cluster-autoscaler-operator-8465bf5f-x6xhb                   2m           52Mi            
+openshift-machine-api                              cluster-baremetal-operator-5ccb7ff89d-8nb4l                  0m           41Mi            
+openshift-machine-api                              machine-api-operator-57b7c78d9c-5dxhq                        0m           41Mi            
+openshift-machine-config-operator                  machine-config-controller-56b4d49f46-fpgft                   0m           33Mi            
+openshift-machine-config-operator                  machine-config-daemon-btfct                                  0m           113Mi           
+openshift-machine-config-operator                  machine-config-daemon-lf6v2                                  0m           97Mi            
+openshift-machine-config-operator                  machine-config-daemon-zf4cb                                  0m           112Mi           
+openshift-machine-config-operator                  machine-config-operator-86d496c9b4-z9hg8                     2m           79Mi            
+openshift-machine-config-operator                  machine-config-server-44tqr                                  0m           12Mi            
+openshift-machine-config-operator                  machine-config-server-87jn8                                  0m           12Mi            
+openshift-machine-config-operator                  machine-config-server-9tpkx                                  0m           12Mi            
+openshift-marketplace                              do480-catalog-7bghj                                          40m          168Mi           
+openshift-marketplace                              marketplace-operator-6cb5758db8-njgbf                        2m           57Mi            
+openshift-monitoring                               alertmanager-main-0                                          6m           101Mi           
+openshift-monitoring                               alertmanager-main-1                                          3m           102Mi           
+openshift-monitoring                               cluster-monitoring-operator-784bbb7ff5-8v2ff                 0m           92Mi            
+openshift-monitoring                               grafana-69f46db9cb-bwmsw                                     9m           93Mi            
+openshift-monitoring                               kube-state-metrics-b67995ff6-7pstc                           2m           108Mi           
+openshift-monitoring                               node-exporter-4d5z5                                          21m          39Mi            
+openshift-monitoring                               node-exporter-6x7gs                                          22m          48Mi            
+openshift-monitoring                               node-exporter-vxstt                                          18m          35Mi            
+openshift-monitoring                               openshift-state-metrics-676454bdcc-bqm5k                     0m           50Mi            
+openshift-monitoring                               prometheus-adapter-8898cc475-2sq64                           10m          70Mi            
+openshift-monitoring                               prometheus-adapter-8898cc475-4mxt6                           3m           64Mi            
+openshift-monitoring                               prometheus-k8s-0                                             101m         1894Mi          
+openshift-monitoring                               prometheus-k8s-1                                             242m         1836Mi          
+openshift-monitoring                               prometheus-operator-6b799f47fd-hhsrj                         3m           150Mi           
+openshift-monitoring                               thanos-querier-5466694958-sk58w                              7m           126Mi           
+openshift-monitoring                               thanos-querier-5466694958-zmrl8                              3m           119Mi           
+openshift-multus                                   multus-additional-cni-plugins-2wwff                          0m           1Mi             
+openshift-multus                                   multus-additional-cni-plugins-8zgbz                          0m           1Mi             
+openshift-multus                                   multus-additional-cni-plugins-mkblf                          0m           1Mi             
+openshift-multus                                   multus-admission-controller-89526                            1m           43Mi            
+openshift-multus                                   multus-admission-controller-nvhmj                            0m           39Mi            
+openshift-multus                                   multus-admission-controller-vccdm                            0m           38Mi            
+openshift-multus                                   multus-j5jp8                                                 23m          23Mi            
+openshift-multus                                   multus-jljs7                                                 18m          23Mi            
+openshift-multus                                   multus-qs9hd                                                 11m          23Mi            
+openshift-multus                                   network-metrics-daemon-ct5nv                                 1m           50Mi            
+openshift-multus                                   network-metrics-daemon-n24f7                                 0m           47Mi            
+openshift-multus                                   network-metrics-daemon-x62fd                                 0m           44Mi            
+openshift-network-diagnostics                      network-check-source-5974595bb7-5rxcm                        7m           58Mi            
+openshift-network-diagnostics                      network-check-target-28g9v                                   0m           7Mi             
+openshift-network-diagnostics                      network-check-target-h56qg                                   0m           5Mi             
+openshift-network-diagnostics                      network-check-target-mp2d7                                   0m           5Mi             
+openshift-network-operator                         network-operator-5f4f68c6c4-bkz4b                            1m           135Mi           
+openshift-oauth-apiserver                          apiserver-756586487f-2jn7b                                   32m          57Mi            
+openshift-oauth-apiserver                          apiserver-756586487f-n52qg                                   34m          57Mi            
+openshift-oauth-apiserver                          apiserver-756586487f-vtcvn                                   17m          59Mi            
+openshift-operator-lifecycle-manager               catalog-operator-b966f4769-xz9n7                             1m           94Mi            
+openshift-operator-lifecycle-manager               olm-operator-5b7d9bb65b-q24d6                                5m           139Mi           
+openshift-operator-lifecycle-manager               package-server-manager-59c558998c-mkxkg                      0m           24Mi            
+openshift-operator-lifecycle-manager               packageserver-f6b8bbb4f-fzgrv                                20m          69Mi            
+openshift-operator-lifecycle-manager               packageserver-f6b8bbb4f-m9wjf                                3m           65Mi            
+openshift-sdn                                      sdn-controller-4fwmx                                         0m           39Mi            
+openshift-sdn                                      sdn-controller-8hpx7                                         0m           43Mi            
+openshift-sdn                                      sdn-controller-mkzk5                                         1m           39Mi            
+openshift-sdn                                      sdn-fdklm                                                    3m           81Mi            
+openshift-sdn                                      sdn-kdp8v                                                    5m           83Mi            
+openshift-sdn                                      sdn-t5kcs                                                    3m           93Mi            
+openshift-service-ca                               service-ca-67459f57b-r5bfz                                   5m           94Mi            
+openshift-service-ca-operator                      service-ca-operator-75454bd7d4-8ggzp                         5m           47Mi            
+openshift-storage                                  csi-cephfsplugin-2426j                                       0m           49Mi            
+openshift-storage                                  csi-cephfsplugin-9rm7l                                       0m           44Mi            
+openshift-storage                                  csi-cephfsplugin-provisioner-c6fc5877c-f8jmz                 2m           96Mi            
+openshift-storage                                  csi-cephfsplugin-provisioner-c6fc5877c-xhd7x                 0m           90Mi            
+openshift-storage                                  csi-cephfsplugin-t9ls5                                       0m           48Mi            
+openshift-storage                                  csi-rbdplugin-gfl2c                                          0m           55Mi            
+openshift-storage                                  csi-rbdplugin-gq8v2                                          0m           51Mi            
+openshift-storage                                  csi-rbdplugin-provisioner-749657c56f-8bgxv                   2m           81Mi            
+openshift-storage                                  csi-rbdplugin-provisioner-749657c56f-psp8t                   3m           97Mi            
+openshift-storage                                  csi-rbdplugin-thgqj                                          0m           66Mi            
+openshift-storage                                  noobaa-core-0                                                77m          357Mi           
+openshift-storage                                  noobaa-db-pg-0                                               10m          143Mi           
+openshift-storage                                  noobaa-endpoint-85b975469f-jdwpv                             8m           78Mi            
+openshift-storage                                  noobaa-operator-659645dc9d-rcmcw                             11m          45Mi            
+openshift-storage                                  ocs-metrics-exporter-546967787d-2h8jg                        0m           25Mi            
+openshift-storage                                  ocs-operator-7dbfbfdf4c-55fkb                                3m           86Mi            
+openshift-storage                                  odf-console-bb7b55b58-5x2ll                                  0m           11Mi            
+openshift-storage                                  odf-operator-controller-manager-6854c8585-ltxt6              3m           55Mi            
+openshift-storage                                  rook-ceph-operator-5568744496-qp9bm                          28m          35Mi            
