@@ -1,0 +1,11 @@
+# Service Account Creation and Cluster Role Binding
+
+```
+oc create sa reader -n ocsa
+```
+
+- Add the `cluster-admin` role to the service account using the `oc adm policy` command. For example, to add the role to the `reader` service account in the `default` project, you can run this command:
+
+```
+oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:open-caas-ops:ocsa
+```
