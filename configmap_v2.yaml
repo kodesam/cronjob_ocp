@@ -6,13 +6,11 @@ data:
   check_status.sh: |
     #!/bin/sh
 
-    current_date=$(date +"%Y-%m-%d")
-    filename_prefix="status_check_output"
-    output_log="${filename_prefix}_${current_date}.log"
+    current_date=$(date")
 
     (
         echo "#############################################################################################################" 
-        echo $date
+        echo $current_date
         echo "#############################################################################################################" 
 
 
